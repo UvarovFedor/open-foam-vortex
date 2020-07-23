@@ -1,1 +1,7 @@
 /.project
+syntax: glob
+*[^0-9.]*
+log.*
+processor*
+constant/polyMesh/*
+constant/cellDecomposition
