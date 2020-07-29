@@ -1,0 +1,32 @@
+2020-07-28 21-39-42
+2020-07-28 21-39-50
+2020-07-28 21-39-52
+2020-07-28 21-41-41 fff
+2020-07-28 21-43-15 begin
+2020-07-28 21-43-17 blockMesh
+2020-07-28 21-43-19 setFields
+2020-07-28 21-43-23 funkySetFields
+2020-07-28 21-43-29 decomposePar
+2020-07-28 21-55-05 rhoCentralFoam
+2020-07-28 22-00-40 reconstructPar
+2020-07-29 13-39-37 begin
+2020-07-29 13-39-40 blockMesh
+2020-07-29 13-39-41 setFields
+2020-07-29 13-39-46 funkySetFields
+2020-07-29 13-39-51 decomposePar
+2020-07-29 13-39-52 rhoPimpleFoam
+2020-07-29 13-39-52 reconstructPar
+2020-07-29 13-39-58 foamToVTK
+2020-07-29 13-43-59 begin
+2020-07-29 13-44-02 blockMesh
+2020-07-29 13-44-03 setFields
+2020-07-29 13-44-08 funkySetFields
+2020-07-29 13-44-13 decomposePar
+2020-07-29 13-44-14 rhoPimpleFoam
+2020-07-29 13-44-14 reconstructPar
+2020-07-29 13-44-21 foamToVTK
+2020-07-29 13-45-24 begin
+2020-07-29 13-45-24 blockMesh
+2020-07-29 13-45-24 setFields
+2020-07-29 13-45-24 funkySetFields
+2020-07-29 13-45-24 decomposePar

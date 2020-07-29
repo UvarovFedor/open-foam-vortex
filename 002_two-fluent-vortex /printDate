@@ -1,0 +1,2 @@
+#!/bin/sh
+date +"%F %H-%M-%S $1"  >> date.log
