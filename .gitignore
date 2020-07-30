@@ -2,6 +2,7 @@
 syntax: glob
 v[0-9][0-9][0-9]*/[0-9]*
 log.*
+**/*.log
 processor*
-constant/polyMesh/*
-constant/cellDecomposition
+**/constant/polyMesh/*
+**/constant/cellDecomposition

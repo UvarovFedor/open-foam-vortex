@@ -16,7 +16,8 @@ runApplication funkySetFields -time 0
 ./../common/printDate funkySetFields
 runApplication decomposePar -cellDist
 ./../common/printDate decomposePar
-runParallel $application./../common/printDate $application
+runParallel $application
+./../common/printDate $application
 runApplication reconstructPar
 ./../common/printDate reconstructPar
 runApplication foamToVTK
