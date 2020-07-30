@@ -9,21 +9,21 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       dictionary;
-    location    "system";
-    object      setFieldsDict;
+    class       volVectorField;
+    object      U;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-defaultFieldValues 
-( 
-	volVectorFieldValue U (0 0 0) 
-	volScalarFieldValue T 100
-	volScalarFieldValue p 1000
-);
+dimensions      [0 1 -1 0 0 0 0];
 
-regions         
-( 
-);
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+    boxWall
+    {
+        type            zeroGradient;
+    }
+}
 
 // ************************************************************************* //
