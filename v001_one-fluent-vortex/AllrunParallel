@@ -3,23 +3,23 @@ cd ${0%/*} || exit 1    # Run from this directory
 
 # Source tutorial run functions
 . $WM_PROJECT_DIR/bin/tools/RunFunctions
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 
 application=`getApplication`
 
-./printDate begin
+./../common/printDate begin
 runApplication blockMesh
-./printDate blockMesh
+./../common/printDate blockMesh
 runApplication setFields
-./printDate setFields
+./../common/printDate setFields
 runApplication funkySetFields -time 0
-./printDate funkySetFields
+./../common/printDate funkySetFields
 runApplication decomposePar -cellDist
-./printDate decomposePar
-runParallel $application
-./printDate $application
+./../common/printDate decomposePar
+runParallel $application./../common/printDate $application
 runApplication reconstructPar
-./printDate reconstructPar
+./../common/printDate reconstructPar
 runApplication foamToVTK
-./printDate foamToVTK
+./../common/printDate foamToVTK
 
 #------------------------------------------------------------------------------

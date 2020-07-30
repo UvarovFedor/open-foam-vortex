@@ -1,0 +1,72 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     3.2                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+solvers
+{
+    p
+    {
+        solver          cudaBiCGStab;
+        preconditioner  Ainv;
+        tolerance       1e-8;
+        relTol          0;
+    }
+
+    U
+    {
+        solver          cudaBiCGStab;
+        preconditioner  Ainv;
+        tolerance       1e-8;
+        relTol          0;
+    }
+
+    rho
+    {
+        solver          cudaCG;
+        preconditioner  DIC;
+        tolerance       1e-8;
+        relTol          0;
+    }
+
+    e
+    {
+        solver          cudaBiCGStab;
+        preconditioner  Ainv;
+        tolerance       1e-8;
+        relTol          0;
+    }
+}
+
+PIMPLE
+{
+    nOuterCorrectors     2;
+    nCorrectors          1;
+    nNonOrthogonalCorrectors 0;
+
+	residualControl
+    {
+        p_rgh
+        {
+            tolerance 1e-02;
+            relTol 0;
+            absTol 0;
+        }
+        
+    }
+}
+
+
+// ************************************************************************* //
