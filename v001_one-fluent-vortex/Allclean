@@ -9,5 +9,6 @@ cleanCase
 rm -rf constant/polyMesh/boundary 0/pointPriority
 rm -rf 0
 cp -r 0.orig/ 0/
+./printDate 'AllClean===================================='
 
 #------------------------------------------------------------------------------
